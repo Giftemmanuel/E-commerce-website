@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eCommerce Website</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <!-- Top Bar -->
+      <div class="nav-1" >
+        <div class="nav-1-left">
+          <p data-translate="free-delivery">FREE delivery & 40% Discount for next 3 orders! Place your 1st order in.</p>
+        </div>
+        <div class="nav-1-right">
+          <p class="count-down" data-translate="countdown">Until the end of the sale: <strong>47</strong> days <strong>06</strong> hours <strong>59</strong> minutes <strong>59</strong> sec.</p>
+        </div>
+      </div>
+
+      <!-- Second Bar -->
+      <div class="nav-2">
+        <div class="nav-2-left">
+          <ul>
+            <li><a href="#" data-translate="about">About Us</a></li>
+            <li><a href="#" data-translate="account">My Account</a></li>
+            <li><a href="#" data-translate="wishlist">Wishlist</a></li>
+            <li data-translate="delivery-hours">We deliver to you every day from <strong class="hours">7:00 to 23:00</strong></li>
+          </ul>
+        </div>
+        <div class="nav-2-right">
+          <ul>
+            
+            <select id="language-select">
+              <option value="English">English</option>
+              <option value="French">French</option>
+              <option value="Spanish">Spanish</option>
+            </select>
+            
+           
+            <select id="currency-select">
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="GBP">GBP</option>
+            </select>
+           
+            <li><a href="#" data-translate="order-tracking">Order Tracking</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Main Navigation -->
+      <div class="nav-3">
+        <div class="logo">
+          <img src="assets/Group 70.png" alt="JinStore Logo">
+          <div class="delivery" data-translate="deliver-to">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Deliver to<br><strong>all</strong></p>
+          </div>
+        </div>
+        <div class="search-box">
+          <input type="text" placeholder="Search for products, categories or brands...">
+          <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="account-icons">
+          <i class="fa-solid fa-user"></i>
+          <p data-translate="sign-in">Sign in <br><strong>Account</strong></p>
+          <i class="fas fa-heart"></i>
+          <i class="fas fa-shopping-cart"></i>
+        </div>
+      </div>
+
+      <!-- Bottom Navigation -->
+      <div class="nav-4">
+        <div class="nav-4-left">
+          <ul>
+            <li><a href="#" data-translate="home">Home ▼</a></li>
+            <li><a href="#" data-translate="shop">Shop ▼</a></li>
+            <li><a href="#" data-translate="fruits-vegetables">Fruits & Vegetables</a></li>
+            <li><a href="#" data-translate="beverages">Beverages</a></li>
+            <li><a href="#" data-translate="blog">Blog</a></li>
+            <li><a href="#"  data-translate="contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="nav-4-right">
+          <ul>
+            <li><a href="#" data-translate="trending-products">Trending Products ▼</a></li>
+            <li><a href="#" data-translate="almost-finished">Almost Finished <span class="sale">SALE</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+ <div class="hero-section" >
+    <div class="hero-content">
+      <p class="hero-discount" data-translate="weekend-discount">Weekend Discount</p>
+      <h1 data-translate="hero-heading">Get the best quality <br> products at the lowest <br> prices</h1>
+      <p data-translate="hero-text">We have prepared special discounts for you on organic breakfast <br> products.</p>
+      <div class="price">
+        <div class="price-container">
+        <button class="shop-now" data-translate="shop-now">Shop Now</button>
+        <span class="price" data-translate="price">$21.67</span>
+        <del class="price-del" data-translate="price-del">$59.99</del>
+        
+      </div>
+      <div class="text">
+      <p class="under-text" data-translate="under-text">Dont miss this limited time offer</p>
+    </div>
+      </div>
+      
+    </div>
+    <div class="hero-image"> </div>
+  </div>
+
+ 
+
+  <script src="script.js"></script>
+</body>
+</html>
