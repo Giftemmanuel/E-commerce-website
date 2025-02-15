@@ -157,3 +157,16 @@ document.addEventListener('DOMContentLoaded', () => {
     animateSearchPlaceholder();
     setupDropdowns();
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Display alert when "View All" is clicked
+    document.querySelector(".view-all").addEventListener("click", () => {
+        alert("Viewing all categories!");
+    });
+});
+
+function toggleCircle(container) {
+    const circle = container.querySelector(".circle");
+    circle.classList.toggle("toggled");
+}
+
