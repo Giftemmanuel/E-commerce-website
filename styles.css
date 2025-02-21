@@ -298,7 +298,7 @@ select {
     justify-content:space-between;
     align-items: center;
     margin-bottom: 20px;
-    margin-left: 150px;
+    margin-left: 90px;
     margin-right: 150px;
     
 }
@@ -329,6 +329,7 @@ select {
     font-weight: bold;
     padding: 10px 15px;
     border-radius: 999px;
+    margin-left: 200px;
 }
 
 .container {
@@ -461,19 +462,20 @@ select {
     overflow: hidden;
    
 }
-
 .new-products p {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.4;
-    max-height: 2.8em; 
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 2; 
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-    text-align: left; 
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  max-height: 2.8em; 
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2; /* Add the standard property */
+  text-overflow: ellipsis;
+  text-align: left; 
 }
+
 
 .price-container {
     display: flex;
@@ -598,7 +600,7 @@ select {
     display: flex;
     align-items: center;
     gap: 5px; 
-
+  }
 .dashed-line {
     width: 50px; 
     height: 2px;
@@ -698,7 +700,8 @@ select {
 .card-container {
     display: flex;
     gap: 16px;
-    margin-left: 150px;
+    margin-left: 78px;
+    margin-bottom: 25px;
     
   }
   
@@ -799,4 +802,352 @@ select {
   
   .shop-now:hover {
     background-color: #d94e08;
+  }
+
+  /* This is the New arrivals section */
+
+
+
+
+
+/* Layout */
+.container-1{
+  display: flex;
+  gap: 0px;
+  padding: 20px;
+  position: relative;
+
+  max-width: 1200px;
+    margin: 30px auto;
+    background: #fff;
+    width: 100%; 
+    overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  width: 25%;
+  background: white;
+  border: 1px solid #ccc;
+}
+
+.profile {
+  text-align: center;
+  padding: 8px;
+}
+
+.profile-top {
+  display: flex;
+  gap: 5px;
+}
+
+.profile-top h3 {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: justify;
+  margin-top: 4px;
+}
+
+.profile-top p {
+  font-size: 11px;
+  color: rgb(144, 144, 144);
+  text-align: justify;
+  margin-top: 2px;
+  margin-bottom: 7px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+}
+
+.rating {
+  color: gold;
+  font-size: 12px;
+}
+
+.rating span {
+  color: gray;
+  font-size: 11px;
+}
+
+.description {
+  font-size: 12px;
+  text-align: left;
+  color: #000;
+  margin-top: 20px;
+}
+
+/* Promo Section */
+.promo {
+  position: relative;
+}
+
+.promo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.promo h1,
+.promo h2,
+.promo h3 {
+  position: absolute;
+  left: 16px;
+  z-index: 1;
+}
+
+.promo h2 {
+  top: 10%;
+  font-size: 12px;
+  color:#EA580C;
+}
+
+.promo h1 {
+  top: 29%;
+  font-size: 16px;
+  font-weight: 700;
+  width: 65%;
+}
+
+.promo h3 {
+  top: 59%;
+  font-size: 12px;
+  color: #a5a5a5;
+}
+
+/* Product Grid as Carousel */
+.carousel-container {
+  width: 75%;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-grid {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 2px;
+  width: 100%;
+}
+
+.product {
+  flex: 0 0 calc(20% - 2px);
+  background: white;
+  padding: 15px;
+  border: 1px solid #ccc;
+  text-align: center;
+  position: relative;
+}
+
+.product img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.product-title {
+  font-size: 12px;
+  margin: 10px 0;
+}
+
+/* Navigation Buttons */
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.carousel-nav:hover {
+  background: white;
+}
+
+/* Product Details */
+.price {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 7px;
+}
+
+.new-price {
+  color: red;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.old-price {
+  color: gray;
+  text-decoration: line-through;
+  font-size: 12px;
+}
+
+.flex-right {
+  display: flex;
+}
+
+.discount {
+  display: block;
+  float: inline-start;
+  background: red;
+  color: white;
+  font-size: 10px;
+  padding: 3px 7px;
+  border-radius: 5px;
+}
+
+.stock {
+  display: block;
+  float: inline-start;
+  color: rgb(8, 149, 8);
+  font-size: 12px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+/* Organic Label and Circle */
+.organic-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.organic {
+  display: flex;
+  flex: 0 1 auto;
+  background: linear-gradient(to right, #D4FC79, #96E6A1);
+  font-size: 10px;
+  font-weight: bold;
+  color: rgb(6, 73, 6);
+  padding: 6px;
+  border-radius: 20px;
+}
+
+.organic p {
+  font-size: 9px;
+}
+
+.organic-label {
+  font-size: 9px;
+}
+
+.circle {
+  width: 25px;
+  height: 25px;
+  margin-left: auto;
+  background-color: #634C9F;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.number-border {
+  display: inline-block;
+  margin-top: 1rem;
+  letter-spacing: 3px;
+  font-size: 10px;
+  color: #bdbdbd;
+}
+
+/* Responsive Design for Tablets */
+@media screen and (max-width: 992px) {
+  .product {
+      flex: 0 0 calc(33.33% - 2px);
+  }
+}
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .sidebar {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .carousel-container {
+      width: 100%;
+  }
+
+  .product {
+      flex: 0 0 calc(50% - 2px);
+  }
+}
+
+/* Extra Small Devices */
+@media screen and (max-width: 480px) {
+  .product {
+      flex: 0 0 calc(100% - 2px);
+  }
+}
+
+  .product-cards{
+    position: relative;
+    width: 590px;
+    height: 240px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    padding: 0; 
+  }
+  
+
+  .product-card-4 {
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/banner-08.jpg.png');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #111827;
+    padding: 16px; 
+    position: absolute;
+    bottom: 0; 
+  }
+  .product-card-5 {
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/banner-09.jpg.png');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #111827;
+    padding: 16px; 
+    position: absolute;
+    bottom: 0; 
   }

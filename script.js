@@ -170,3 +170,79 @@ function toggleCircle(container) {
     circle.classList.toggle("toggled");
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    const productGrid = document.querySelector('.product-grid');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const products = document.querySelectorAll('.product');
+    
+    let currentIndex = 0;
+    let productsPerView = getProductsPerView();
+    let maxIndex = Math.max(0, products.length - productsPerView);
+    
+    // Set initial width of products based on screen size
+    updateProductWidths();
+    
+    // Update carousel on window resize
+    window.addEventListener('resize', function() {
+        productsPerView = getProductsPerView();
+        maxIndex = Math.max(0, products.length - productsPerView);
+        updateProductWidths();
+        
+        // Reset position if current index is now invalid
+        if (currentIndex > maxIndex) {
+            currentIndex = maxIndex;
+            updateCarouselPosition();
+        }
+    });
+    
+    // Navigation button event listeners
+    prevBtn.addEventListener('click', function() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarouselPosition();
+        }
+    });
+    
+    nextBtn.addEventListener('click', function() {
+        if (currentIndex < maxIndex) {
+            currentIndex++;
+            updateCarouselPosition();
+        }
+    });
+    
+    // Helper functions
+    function getProductsPerView() {
+        if (window.innerWidth <= 480) {
+            return 1;
+        } else if (window.innerWidth <= 768) {
+            return 2;
+        } else if (window.innerWidth <= 992) {
+            return 3;
+        } else {
+            return 5;
+        }
+    }
+    
+    function updateProductWidths() {
+        const productWidth = 100 / productsPerView;
+        products.forEach(product => {
+            product.style.flex = `0 0 calc(${productWidth}% - 2px)`;
+        });
+    }
+    
+    function updateCarouselPosition() {
+        const productWidth = 100 / productsPerView;
+        const translateX = -currentIndex * productWidth;
+        productGrid.style.transform = `translateX(${translateX}%)`;
+        
+        // Update button states
+        prevBtn.style.opacity = currentIndex === 0 ? '0.5' : '1';
+        nextBtn.style.opacity = currentIndex === maxIndex ? '0.5' : '1';
+    }
+    
+    // Initialize button states
+    prevBtn.style.opacity = '0.5';
+    nextBtn.style.opacity = maxIndex === 0 ? '0.5' : '1';
+});
+
