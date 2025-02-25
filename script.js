@@ -289,6 +289,7 @@ document.addEventListener("DOMContentLoaded", () => {
         feature.addEventListener("mouseout", () => {
             feature.style.transform = "scale(1)";
         });
+        
     });
 });
 
