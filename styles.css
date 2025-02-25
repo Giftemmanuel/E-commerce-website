@@ -196,7 +196,7 @@ select {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 3rem 20px; 
+     
     background-image: url('assets/slider-03.jpg.png');
     background-size: contain;
     background-position: center;
@@ -204,6 +204,7 @@ select {
     min-height: 50vh;
     max-width: 1200px; 
     margin: 0 auto; 
+    padding: 3rem 20px;
     
   }
   
@@ -542,7 +543,11 @@ select {
     background: linear-gradient(to right, #A5EFFF, #E7F8FD); 
     font-size: 10px;
     font-weight: bold;
-    padding: 5px 10px;
+    padding-top: 6px;
+    padding-left: 6px ;
+    padding-right: 6px ;
+    width: 88.72px;
+    height: 24px;
     border-radius: 20px;
    color: #0074B7;
    display: flex;
@@ -652,7 +657,7 @@ select {
     width: 100%;
     height: 1px;
     background: #E5E7EB;
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 .warning-text{
@@ -1017,11 +1022,18 @@ select {
 .discount {
   display: block;
   float: inline-start;
-  background: red;
+ 
   color: white;
   font-size: 10px;
   padding: 3px 7px;
-  border-radius: 5px;
+  border-radius: 10px;
+
+  background:#DC2626;
+   
+   
+   
+   
+   
 }
 
 .stock {
@@ -1309,4 +1321,283 @@ position: relative; /* Removes absolute positioning */
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     }
+}
+
+.container2 {
+  display: grid;
+  grid-template-areas: 
+      "sidebar content1";
+      
+  grid-template-columns: 1fr 4fr; /* Sidebar is fixed, content is flexible */
+  grid-template-rows: auto auto;
+  margin: 30px 35px ;
+   height: 200px;
+  margin-left: 90px;
+  margin-bottom: 160px;
+}
+
+.small{
+  /* width: 100%;
+  border: 2px solid #E5E7EB;
+  border-radius: 10px;
+  padding: 15px;
+  background: white;
+  box-sizing: border-box; */
+  width: 100%;
+  border: 1px solid #E5E7EB; /* Thinner border */
+  border-radius: 10px;
+  padding: 15px;
+  background: white;
+  box-sizing: border-box;
+
+}
+.divider {
+  height: 1px;
+  background-color: #E5E7EB; /* Light gray */
+  width: 100%; /* Stretches fully */
+  margin: 10px 0; /* Adds space above and below */
+}
+
+.divider {
+  height: 1px;
+  background-color: #E5E7EB; /* Light gray */
+  width: 100%; /* Stretches fully */
+  margin: 10px 0; /* Adds space above and below */
+}
+
+.small:not(:last-child) {
+  margin-bottom: 15px; /* Adds space between the two small boxes */
+}
+.small-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%; 
+}
+.big{
+  /* width: 100%; 
+  border: 2px solid #E5E7EB;
+  border-radius: 10px;
+  padding: 15px;
+  background: white; */
+  /* width: 100%;
+  border: 2px solid #DC2626;
+  border-radius: 10px;
+  padding: 15px;
+  background: white;
+  min-height: 36vw;  */
+
+  
+  position: relative;
+  border: 2px solid #E41E3F; /* Red border */
+  border-radius: 10px;
+  padding: 15px;
+  background: white;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 900px; /* Adjust container width */ 
+  
+}
+
+.custom-discount {
+  background:#DC2626;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 5px 8px;
+  border-radius: 15px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.custom-heart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 22px;
+  color: gray;
+  cursor: pointer;
+  margin-right: 360px;
+}
+
+.holder{
+  width: 1200px;
+  margin-left: 70px;
+  
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+
+.top-col{
+  background-color: #6B7280;
+
+}
+.bottom-col{
+  background-color: #333;
+  
+}
+.top-col-left{
+  float: left;
+ 
+  width: 150px;
+  
+}
+.top-col-right{
+  float: left;
+  height: 50px;
+  width: 150px;
+ 
+}
+
+.top-col-right p{
+  font-size: 14px;
+}
+
+.clear-float{
+  clear: both;
+}
+.add-cart-left{
+  padding: 5px 30px;
+  border-radius: 50px;
+  border-color: #634C9F;
+  color: #634C9F;
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 0;
+  width: 100%; /* Makes the button full width of its container */
+  max-width: 250px; 
+  margin-bottom: 42px;
+}
+.plus-icon {
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 35px;
+}
+.heart{
+  margin-left: 85px;
+}
+.countdown-p{
+  font-size: 9px !important;
+ color: #9CA3AF;
+  margin-left: auto;
+}
+.countdown-container {
+  display: flex;
+  align-items:self-start;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #6B7280;
+  margin-top: 10px;
+}
+
+
+
+.countdown {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.time-box {
+  background: #E5E7EB;
+  padding: 4px 9px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 10px;
+  color:#4B5563;
+}
+
+.custom-product-container {
+  /* display: flex;
+  border-radius: 10px;
+  padding: 15px;
+  background: white;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 900px;
+  gap: 20px;
+  align-items: center; 
+  height: 100%; Ensure it fills available space */
+
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+}
+
+.custom-product-image {
+  flex: 1.5;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+}
+
+.custom-product-image img {
+  width: 410px;
+  height: 415px;
+  border-radius: 10px;
+}
+
+.cus-cold-sale-label {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: inline-block;
+    background: linear-gradient(to right, #A5EFFF, #E7F8FD); 
+    font-size: 10px;
+    font-weight: bold;
+    padding-top: 6px;
+    padding-left: 6px ;
+    padding-right: 6px ;
+    width: 88.72px;
+    height: 24px;
+    border-radius: 20px;
+   color: #0074B7;
+   display: flex;
+    align-items: center;
+    gap: 5px; 
+   
+}
+
+.cus-cold-sale-label img {
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+ 
+}
+
+
+.custom-product-details {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 12px;
+}
+
+.custom-product-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+}
+
+.custom-product-description {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.custom-add-to-cart {
+  background: green;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 16px;
 }

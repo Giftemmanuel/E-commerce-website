@@ -246,3 +246,32 @@ document.addEventListener('DOMContentLoaded', function() {
     nextBtn.style.opacity = maxIndex === 0 ? '0.5' : '1';
 });
 
+function startCountdown(durationInSeconds) {
+    let timer = durationInSeconds;
+
+    function updateCountdown() {
+        let days = Math.floor(timer / (24 * 60 * 60));
+        let hours = Math.floor((timer % (24 * 60 * 60)) / (60 * 60));
+        let minutes = Math.floor((timer % (60 * 60)) / 60);
+        let seconds = timer % 60;
+
+        // Select all countdown elements and update them
+        document.querySelectorAll(".countdown").forEach(countdown => {
+            countdown.querySelector(".time-box:nth-child(1)").textContent = String(days).padStart(2, '0');
+            countdown.querySelector(".time-box:nth-child(2)").textContent = String(hours).padStart(2, '0');
+            countdown.querySelector(".time-box:nth-child(3)").textContent = String(minutes).padStart(2, '0');
+            countdown.querySelector(".time-box:nth-child(4)").textContent = String(seconds).padStart(2, '0');
+        });
+
+        if (timer > 0) {
+            timer--;
+            setTimeout(updateCountdown, 1000);
+        }
+    }
+
+    updateCountdown();
+}
+
+// Start countdown from 84 days, 6 hours, 59 minutes, and 59 seconds
+const initialDuration = (84 * 24 * 60 * 60) + (6 * 60 * 60) + (59 * 60) + 59;
+startCountdown(initialDuration);
