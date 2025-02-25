@@ -275,3 +275,26 @@ function startCountdown(durationInSeconds) {
 // Start countdown from 84 days, 6 hours, 59 minutes, and 59 seconds
 const initialDuration = (84 * 24 * 60 * 60) + (6 * 60 * 60) + (59 * 60) + 59;
 startCountdown(initialDuration);
+
+// features section
+document.addEventListener("DOMContentLoaded", () => {
+    const features = document.querySelectorAll(".feature");
+
+    features.forEach(feature => {
+        feature.addEventListener("mouseover", () => {
+            feature.style.transform = "scale(1.05)";
+            feature.style.transition = "0.3s ease-in-out";
+        });
+
+        feature.addEventListener("mouseout", () => {
+            feature.style.transform = "scale(1)";
+        });
+    });
+});
+
+document.querySelector(".hamburger").addEventListener("click", function() {
+    document.querySelector(".nav-menu").classList.toggle("active");
+});
+
+
+

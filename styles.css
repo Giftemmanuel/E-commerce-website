@@ -191,6 +191,77 @@ select {
     margin-left: 5px;
 }
   
+/* responsive nav */
+/* Default styles for large screens */
+@media (min-width: 769px) {
+    .hamburger {
+        display: none; /* Hide the hamburger on large screens */
+    }
+
+    .nav-1, .nav-2, .nav-3, .nav-4 {
+        display: flex; /* Show all nav bars */
+    }
+}
+
+/* Responsive Styles for Small Screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show the hamburger menu */
+        font-size: 30px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: #333;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        z-index: 1000;
+    }
+
+    /* Show only countdown in nav-1 */
+    .nav-1 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-1 > *:not(.count-down) {
+        display: none;
+    }
+
+    /* Show nav-3 always */
+    .nav-3 {
+        display: flex;
+    }
+
+    /* Hide nav-2 and nav-4 by default */
+    .nav-2, .nav-4 {
+        display: none;
+    }
+
+    /* When the menu is active, show nav-4 as a row */
+    .nav-menu.active .nav-4 {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        width: 100%;
+        background: #fff;
+        padding: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-4 ul {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 15px;
+    }
+
+    .nav-4 ul li {
+        white-space: nowrap;
+    }
+}
+
+/* responsive nav */
+
 /* Hero Section */
 .hero-section {
     display: flex;
@@ -1600,4 +1671,488 @@ position: relative; /* Removes absolute positioning */
   cursor: pointer;
   margin-top: 10px;
   font-size: 16px;
+}
+
+/* features section */
+.features-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+  margin-bottom: 200px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  max-width: 220px;
+}
+
+.feature img {
+  width: 57px;
+  height: 57px;
+}
+
+.feature-text h4 {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0;
+  
+}
+
+.feature-text p {
+  font-size: 12px;
+  color: #6B7280;
+  margin: 5px 0 0;
+  line-height: 1.4; /* Adjust line spacing */
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit text to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add "..." if text is truncated */
+  max-width: 180px; /* Adjust width to control wrapping */
+}
+
+/* footer */
+/* ===========================
+   Footer General Styling
+   =========================== */
+   .footer {
+    background-color: #f8f9fb;
+    padding: 50px 10%;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+/* ===========================
+   Newsletter Section
+   =========================== */
+.newsletter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+.newsletter-text {
+    flex: 1;
+}
+
+.newsletter-text h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.newsletter-text p {
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+  width: 100%;
+  max-width: 350px;
+  text-align: left;
+  display: block;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex: 1;
+}
+
+.newsletter-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+  width: 100%;
+  max-width: 350px;
+    
+}
+
+.newsletter-input input {
+  padding: 12px 15px;
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+  width: 100%;
+}
+
+.newsletter-input button {
+  background-color:#634C9F;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 0 10px 10px 0;
+  height: 100%;
+}
+
+.newsletter-form small {
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+  width: 100%;
+  max-width: 350px;
+  text-align: left;
+  display: block;
+}
+
+/* ===========================
+   Footer Columns
+   =========================== */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px; /* Reduce gap to match design */
+  margin-top: 30px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-column h4 {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-bottom: 10px;
+}
+
+
+.footer-column p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.footer-column .phone, .footer-column .email {
+    font-weight: bold;
+    font-size: 15px;
+}
+.phone-icon{
+  width: 20px;
+    height: 20px;
+    margin: 0; /
+}
+
+.phone, .email {
+  font-weight: bold;
+  font-size: 15px;
+}
+.footer-column .phone, 
+.footer-column .email {
+    font-weight: bold;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+}
+.footer-column .phone-schedule {
+  font-size: 12px;
+  color: #666;
+  margin: 5px 0 10px 30px; /* Adjusted for better alignment */
+}
+.contact-item {
+  display: flex;
+  align-items: center; /* Ensures icons and text are aligned */
+  gap: 10px; /* Space between icon and text */
+  margin: 5px 0;
+}
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+  }
+
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #6c44dc;
+}
+
+/* ===========================
+   App Download Section
+   =========================== */
+   .app-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Space between each row */
+  }
+  
+  .app-link {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between image and text */
+  }
+  
+  .app-link p {
+    font-size: 10px;
+    color: #333; /* Adjust color as needed */
+    margin: 0; /* Remove default margin */
+    white-space: nowrap; /* Prevent text from breaking */
+  }
+  
+
+/* ===========================
+   Social Icons
+   =========================== */
+   .follow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Moves everything inside to the right */
+    text-align: right;
+    width: 100%; /* Ensures full width for proper alignment */
+    margin-top: 20px; /* Adds spacing */
+  }
+  
+  .follow {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end; /* Moves icons to the right */
+  }
+  
+  .social-icons a {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .social-icons a img {
+    width: 15px;
+    height: 15px;
+    transition: opacity 0.3s;
+    display: block;
+  }
+  
+  .social-icons a:hover {
+    transform: scale(1.1);
+  }
+  
+/* ===========================
+   Responsive Design
+   =========================== */
+@media (max-width: 1024px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .newsletter {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .newsletter-form {
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .newsletter-input input {
+        width: 100%;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer-column {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .app-links img {
+        width: 130px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Copyright Text */
+.copyright {
+  color: #ccc;
+  font-size: 14px;
+  flex: 1;
+}
+
+.copyright a {
+  color: #8a2be2; /* Purple link */
+  text-decoration: none;
+}
+
+.copyright a:hover {
+  text-decoration: underline;
+}
+
+/* Payment Icons */
+.payment-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.payment-icons img {
+  width: 40px;
+  height: auto;
+}
+
+/* Footer Links */
+.footer-links {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-links a {
+  color: #ccc;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* final section */
+/* Final Footer Styling */
+.final-container {
+  background-color: #f5f5f5;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #ddd;
+}
+
+.final-inner {
+  width: 90%;
+  max-width: 1360px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+}
+
+
+/* Footer Container */
+.final-container {
+  background-color: #f7f7f7;
+  padding: 20px 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  border-top: 1px solid #ddd;
+}
+
+.final-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Copyright Text */
+.final-copyright {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.final-copyright a {
+  color: #555;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.final-copyright a:hover {
+  text-decoration: underline;
+}
+
+/* Payment Icons */
+.final-payment-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.final-payment-icons img {
+  height: 13px;
+  width: auto;
+  margin-top: 70px;
+  margin-right: 50px;
+}
+
+/* Footer Links */
+.final-links {
+  display: flex;
+  justify-content:start;
+  gap: 20px;
+  font-size: 14px;
+}
+
+.final-links a {
+  color: #333;
+  text-decoration: none;
+}
+
+.final-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .final-inner {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .final-left,
+  .final-right {
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .final-right {
+      margin-top: 10px;
+      flex-direction: column;
+      gap: 5px;
+  }
 }
