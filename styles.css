@@ -267,7 +267,7 @@ select {
     display: flex;
     align-items: center;
     justify-content: space-between;
-     
+     padding: 5rem 20px;
     background-image: url('assets/slider-03.jpg.png');
     background-size: contain;
     background-position: center;
@@ -282,7 +282,7 @@ select {
   
   .hero-content {
     max-width: 50%;
-    min-height: 60vh;
+    /* min-height: 60vh; */
     /* background-image: url(assets/slider-03.jpg.png); */
     background-size:cover;
     margin-left: 50px;

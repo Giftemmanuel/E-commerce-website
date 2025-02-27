@@ -291,7 +291,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         
     });
-});
+});  
 
 
 document.querySelector(".hamburger").addEventListener("click", function() {
