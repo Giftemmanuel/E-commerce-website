@@ -134,6 +134,24 @@ function updateLanguage(lang) {
     });
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    // Desktop language select
+    const languageSelect = document.getElementById("language-select");
+    if (languageSelect) {
+      languageSelect.addEventListener("change", function () {
+        updateLanguage(this.value);
+      });
+    }
+  
+    // Mobile language select
+    const mobileLangSelect = document.getElementById("mobile-lang");
+    if (mobileLangSelect) {
+      mobileLangSelect.addEventListener("change", function () {
+        updateLanguage(this.value);
+      });
+    }
+  });
+  
     // Function to setup dropdowns
 function setupDropdowns() {
     const langSelect = document.querySelector('#language-select');

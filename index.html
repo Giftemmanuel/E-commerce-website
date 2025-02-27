@@ -9,35 +9,35 @@
 </head>
 <body>
   <header>
-   <!-- Hamburger Menu Button -->
+<!-- Hamburger Menu Button -->
 <button class="hamburger">&#9776;</button>
 
-<!-- Mobile Navigation Menu -->
-<div class="mobile-menu">
-    <button class="close-btn">&times;</button> <!-- Close button -->
-    <ul>
-        <li><a href="#" data-translate="about">About Us</a></li>
-        <li><a href="#" data-translate="account">My Account</a></li>
-        <li><a href="#" data-translate="wishlist">Wishlist</a></li>
-        <li>
-            <label for="mobile-lang-select">Change Language:</label>
-            <select id="mobile-lang-select">
-                <option value="English">English</option>
-                <option value="French">French</option>
-                <option value="Spanish">Spanish</option>
-            </select>
-        </li>
-        <li>
-            <label for="mobile-currency-select">Change Currency:</label>
-            <select id="mobile-currency-select">
-                <option value="USD">USD</option>
-                <option value="EUR">EUR</option>
-                <option value="GBP">GBP</option>
-            </select>
-        </li>
-        <li><a href="#" data-translate="sign-in">Sign In</a></li>
-        <li><a href="#" data-translate="contact">Contact</a></li>
-    </ul>
+   <!-- Mobile Menu (inside your header or mobile overlay) -->
+<div class="mobile-menu" id="mobile-menu">
+  <button class="close-btn" id="close-menu">&times;</button>
+  <ul>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">My Account</a></li>
+    <li><a href="#">Wishlist</a></li>
+    <li>
+      <label for="mobile-lang">Language:</label>
+      <select id="mobile-lang">
+        <option value="English">English</option>
+        <option value="French">French</option>
+        <option value="Spanish">Spanish</option>
+      </select>
+    </li>
+    <li>
+      <label for="mobile-currency">Currency:</label>
+      <select id="mobile-currency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+      </select>
+    </li>
+    <li><a href="#">Sign In</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
 </div>
 
  
@@ -52,7 +52,6 @@
           <p class="count-down" data-translate="countdown">Until the end of the sale: <strong>47</strong> days <strong>06</strong> hours <strong>59</strong> minutes <strong>59</strong> sec.</p>
         </div>
       </div>
-      
 
       <!-- Second Bar -->
 
