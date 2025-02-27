@@ -299,4 +299,18 @@ document.querySelector(".hamburger").addEventListener("click", function() {
 });
 
 
+// today
+// Get elements
+const hamburger = document.querySelector(".hamburger");
+const mobileMenu = document.querySelector(".mobile-menu");
+const closeBtn = document.querySelector(".close-btn");
 
+// Open menu
+hamburger.addEventListener("click", function () {
+    mobileMenu.classList.add("active");
+});
+
+// Close menu
+closeBtn.addEventListener("click", function () {
+    mobileMenu.classList.remove("active");
+});
