@@ -385,18 +385,28 @@
         flex-direction: column;
         width: 90%; /* Adjusted for smaller screens */
         padding: 0 10px;
+
+        flex-wrap: nowrap; /* Keep horizontal scrolling */
+        overflow-x: auto;
     }
     .sidebar, .carousel-container {
         width: 100%;
+
+        flex: 0 0 100%;
+        min-width: 100%;
+        order: -1;
     }
     .product {
         flex: 0 0 calc(50% - 2px);
+
+        flex: 0 0 45%;
     }
 }
 
 @media (max-width: 480px) {
     .product {
-        flex: 0 0 100%;
+       
+        flex: 0 0 30%;
     }
     .promo h1 {
         font-size: 14px;
@@ -410,6 +420,28 @@
     }
 }
 
+/* FEATURED PRODUCTS */
+@media screen and (max-width: 768px) {
+  .sidebar1 {
+    flex: 0 0 45%; /* Even smaller sidebar on smaller screens */
+    min-width: 140px;
+  }
+
+  .product {
+    flex: 0 0 35%; /* Ensure 2 products fit on screen */
+  }
+}
+
+/* Adjust for mobile screens */
+@media screen and (max-width: 480px) {
+  .product {
+    flex: 0 0 25%; /* Show 2 products side by side */
+  }
+
+  .sidebar1 {
+    flex: 0 0 35%; /* Smaller sidebar on very small screens */
+  }
+}
 /* ===========================
  Responsive Design
  =========================== */

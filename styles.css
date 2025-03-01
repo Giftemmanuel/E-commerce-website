@@ -830,6 +830,8 @@ margin-bottom: 10px;
 /*New arrivals section */
 .container-1{
 display: flex;
+flex-wrap: wrap;
+justify-content: center;
 gap: 0px;
 /* padding: 20px; */
 position: relative;
@@ -949,7 +951,9 @@ width: 100%;
 }
 
 .product {
-flex: 0 0 calc(20% - 2px);
+
+
+flex: 0 0 calc(23% - 10px); /* Adjust product width */
 background: white;
 padding: 15px;
 border: 1px solid #ccc;
@@ -1264,6 +1268,9 @@ display: inline-block;
 font-size: 14px;
 line-height: 1;
 width: 25%;
+
+flex: 0 0 25%; /* Sidebar takes 25% of the width */
+min-width: 200px;
 }
 
 
