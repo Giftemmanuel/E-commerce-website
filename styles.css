@@ -384,7 +384,7 @@ button:hover {
 }
 
 .category p {
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 500;
   white-space: nowrap;
 }
@@ -703,17 +703,9 @@ margin-bottom: 10px;
 
 
 
-@media (max-width: 768px) {
-  .category {
-      width: calc(22% - 10px);
-  }
-}
 
-@media (max-width: 480px) {
-  .category {
-      width: calc(45% - 10px);
-  }
-}
+
+
 
 .card-container {
   display: flex;
@@ -800,18 +792,19 @@ margin-bottom: 10px;
   margin: 8px 0 14px 0;
   margin-top: 15px;
 }
-
-.shop-now {
-  background-color:#6c63ff;
-  color: #fff;
+.shop-now-below {
+  background-color:#FFFFFF;
+  color: #212529;
   font-size: 14px;
   font-weight: 600;
   border: none;
-  border-radius: 6px;
-  height: 50px;
+  border-radius: 99px;
+  height: 34px;
   cursor: pointer;
   display: flex;
   align-items: center;
+  padding: 0.4rem 0.9rem;
+  
 }
 
 .shop-now .arrow {
