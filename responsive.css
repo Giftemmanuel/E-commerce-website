@@ -254,7 +254,7 @@
   }
 
   .top {
-    font-size: 16px; /* Reduce text size */
+    font-size: 14px; /* Reduce text size */
   }
 
   .Bottom {
@@ -308,7 +308,7 @@
   }
 
   .top {
-    font-size: 12px;
+    font-size: 14px !important;
   }
 
   .Bottom {
@@ -350,8 +350,66 @@
   }
 }
 
+/* CARDS */
+@media (max-width: 768px) { 
+  .card-container {
+    flex-direction: column; /* Stack cards earlier (for tablets and smaller) */
+    align-items: center;
+    gap: 16px;
+    padding: 0 20px; 
+  }
 
-  
+  .product-card {
+    width: 100%; /* Take full width for better spacing */
+    height: 200px; /* Maintain height */
+    max-width: 90%;
+  }
+
+  .product-card h2 {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .shop-now {
+    font-size: 14px;
+    padding: 0.4rem 0.9rem;
+  }
+}
+
+  /* NEW ARRIVALS */
+  @media (max-width: 768px) {
+    .container-1 {
+        flex-direction: column;
+        width: 90%; /* Adjusted for smaller screens */
+        padding: 0 10px;
+    }
+    .sidebar, .carousel-container {
+        width: 100%;
+    }
+    .product {
+        flex: 0 0 calc(50% - 2px);
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        flex: 0 0 100%;
+    }
+    .promo h1 {
+        font-size: 14px;
+    }
+    .promo h2, .promo h3 {
+        font-size: 10px;
+    }
+    .container-1 {
+        width: 95%; /* More spacing on smallest screens */
+        padding: 0 5px;
+    }
+}
+
 /* ===========================
  Responsive Design
  =========================== */
