@@ -217,29 +217,29 @@
 }
 
 /* CATEGORIES */
-@media screen and (max-width: 1024px) {
-    .categories {
-      flex-wrap: wrap; /* Allow wrapping */
-      justify-content: center; /* Center items */
-      gap: 10px; /* Add spacing */
-    }
-  
-    .category {
-      flex: 1 1 calc(33.33% - 10px); /* Show 3 per row */
-      width: auto; /* Let content define width */
-      height: auto;
-    }
-  
-    .category img {
-      width: 80px; /* Slightly smaller images */
-      height: auto;
-    }
-  
-    .category p {
-      font-size: 12px; /* Adjust text size */
-    }
+@media (max-width: 768px) {
+  .categories {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;  /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Enables snapping effect */
+    gap: 10px;
+    padding: 10px 0;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for mobile */
   }
-  
+
+  .category {
+    flex: 0 0 auto; /* Prevents shrinking */
+    width: 152px; /* Fixed width */
+    scroll-snap-align: start; /* Aligns items while scrolling */
+  }
+
+  /* Optional: Hide scrollbar on mobile */
+  .categories::-webkit-scrollbar {
+    display: none; 
+  }
+}
+
  
 
 
