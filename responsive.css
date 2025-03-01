@@ -217,30 +217,59 @@
 }
 
 /* CATEGORIES */
+
+/* Responsive: 3 per row on smaller screens */
+/* Responsive: 3 per row on smaller screens */
 @media (max-width: 768px) {
   .categories {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;  /* Enable horizontal scrolling */
-    scroll-snap-type: x mandatory; /* Enables snapping effect */
-    gap: 10px;
-    padding: 10px 0;
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling for mobile */
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center; /* Center items */
   }
 
   .category {
-    flex: 0 0 auto; /* Prevents shrinking */
-    width: 152px; /* Fixed width */
-    scroll-snap-align: start; /* Aligns items while scrolling */
-  }
-
-  /* Optional: Hide scrollbar on mobile */
-  .categories::-webkit-scrollbar {
-    display: none; 
+    flex: 1 1 calc(33.33% - 10px); /* 3 items per row */
   }
 }
 
+/* Responsive: 2 per row on even smaller screens */
+@media (max-width: 480px) {
+  .category {
+    flex: 1 1 calc(50% - 10px); /* 2 items per row */
+  }
+}
+
+/* Single column for extra small screens */
+@media (max-width: 320px) {
+  .category {
+    flex: 1 1 100%; /* 1 item per row */
+  }
+}
+
+
+
  
+/*NEXT CATEGORY*/
+@media (max-width: 768px) { 
+  .next-container {
+    overflow-x: auto; /* Enables horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+  }
+
+  .next-categories {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Enables snapping */
+    gap: 10px;
+    padding-bottom: 10px;
+  }
+
+  .new-products {
+    flex: 0 0 auto; /* Ensures items do not shrink */
+    width: 250px; /* Adjust width to fit smaller screens */
+    scroll-snap-align: start; /* Ensures smooth snapping */
+  }
+}
 
 
   
