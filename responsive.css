@@ -128,64 +128,65 @@
     }
   
     /* Hero Image */
-    .hero-image {
-      width: 100%;
-      height: 110px; 
-      background-size: cover;
-      background-position: left center; 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  
-    .hero-content {
-      width: 90%;
-      max-width: 100%;
-      text-align: center;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      top: auto;
-      left: auto;
-      transform: none; 
-      z-index: 2;
-    }
-  
-    .hero-content h1 {
-      font-size: 1.8rem; 
-      margin-bottom: 0.5rem;
-    }
-  
-    .hero-content p {
-      font-size: 0.9rem; 
-      margin-bottom: 1rem;
-    }
-  
-    .price-container {
-      display: none;
-    }
-  
-    
-    .shop-now {
-      display: block;
-      background-color: #6c63ff;
-      color: #fff;
-      padding: 0.7rem 1.2rem; 
-      border: none;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      cursor: pointer;
-      font-weight: bold;
-      text-align: center;
-      margin-top: 1rem;
-    }
-  
-    .shop-now:hover {
-      background-color: #5549d9;
-    }
+.hero-image {
+  width: 100%;
+  height: 110px;
+  background-size: cover;
+  background-position: center; /* Ensures the background image is centered */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Hero Content */
+.hero-content {
+  width: 100%;
+  max-width: 600px; /* Restrict width for better centering */
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+/* Remove Price */
+.price-container {
+  display: none !important;
+}
+
+/* Heading */
+.hero-content h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Paragraph */
+.hero-content p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* Button */
+.shop-now {
+  display: inline-block;
+  background-color: #6c63ff;
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.shop-now:hover {
+  background-color: #5549d9;
+}
   }
 
   /* HEADER */
