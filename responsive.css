@@ -419,29 +419,192 @@
         padding: 0 5px;
     }
 }
+/* 2 CARDS */
 
+@media screen and (max-width: 768px) {
+  .other-cards {
+    display: flex; /* Ensure flexbox is active */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+    justify-content: space-between; /* Keep them side by side */
+  }
+
+  .adjust {
+    width: 48%; /* Makes sure two cards fit side by side */
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .other-cards {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent stacking */
+    justify-content: flex-start; /* Align cards properly */
+    overflow-x: auto; /* Allow scrolling if needed */
+    gap: 8px;
+    padding: 0 10px;
+  }
+
+  .adjust {
+    width: 180px; /* Adjust to fit */
+    flex-shrink: 0; /* Prevent shrinking */
+  }
+}
 /* FEATURED PRODUCTS */
 @media screen and (max-width: 768px) {
-  .sidebar1 {
-    flex: 0 0 45%; /* Even smaller sidebar on smaller screens */
-    min-width: 140px;
+  .container1 {
+    display: flex;
+    flex-wrap: nowrap; /* Prevents wrapping */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    scroll-behavior: smooth;
   }
 
+  /* Keep Sidebar in Place */
+  .sidebar1 {
+    flex-shrink: 0;
+    width: 200px; /* Adjust width */
+    border-right: 1px solid #ccc;
+   
+  }
+
+  /* Make Products Scroll */
+  .product-cards1 {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 16px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-left: 16px; /* Ensures spacing */
+  }
+
+  /* Prevent Products from Collapsing */
   .product {
-    flex: 0 0 35%; /* Ensure 2 products fit on screen */
+    min-width: 220px; /* Prevents shrinking */
+    flex-shrink: 0;
   }
 }
 
-/* Adjust for mobile screens */
-@media screen and (max-width: 480px) {
-  .product {
-    flex: 0 0 25%; /* Show 2 products side by side */
+/* DEALS OF THE DAY */
+@media screen and (max-width: 768px) {
+  .holder {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 
-  .sidebar1 {
-    flex: 0 0 35%; /* Smaller sidebar on very small screens */
+  .small-container {
+    width: 100%; /* Make it take full width */
+  }
+
+  .small {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .big {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .custom-product-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .custom-product-image img {
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* Adjusts image size for smaller screens */
+  }
+
+  .custom-product-details {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .custom-product-title {
+    font-size: 18px;
+  }
+
+  .custom-product-description {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  .custom-add-to-cart {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .countdown-container {
+    justify-content: center;
+    font-size: 12px;
+  }
+
+  .custom-heart {
+    font-size: 18px;
+    margin-right: 0;
+    right: 10px;
+  }
+
+  .add-cart-left {
+    width: 100%;
+    max-width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .cus-cold-sale-label {
+    font-size: 9px;
+    padding: 5px 8px;
+    bottom: 5px;
+    left: 5px;
+  }
+
+  .cus-cold-sale-label img {
+    width: 12px;
+    height: 12px;
   }
 }
+
+/* FEATURES SECTION */
+
+@media screen and (max-width: 768px) {
+  .features-container {
+    flex-direction: column; /* Stack features vertically */
+    align-items: flex-start; /* Align items to the left */
+    gap: 15px; /* Reduce spacing */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .feature {
+    max-width: 100%; /* Full width for smaller screens */
+    justify-content: flex-start; /* Align content to the left */
+  }
+
+  .feature img {
+    width: 45px; /* Slightly smaller images */
+    height: 45px;
+  }
+
+  .feature-text h4 {
+    font-size: 14px; /* Reduce heading size */
+  }
+
+  .feature-text p {
+    font-size: 11px; /* Adjust text size */
+    max-width: 100%; /* Allow full width */
+  }
+}
+
+
 /* ===========================
  Responsive Design
  =========================== */

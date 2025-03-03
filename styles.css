@@ -827,7 +827,29 @@ margin-bottom: 10px;
   background-color: #d94e08;
 }
 
-/*New arrivals section */
+/* 2 CARDS SECTION */
+.other-cards{
+  display: flex;
+  flex-wrap: wrap; /* Ensures items wrap */
+  gap: 16px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+.adjust{
+  position: relative;
+  width: 390px;
+  height: 200px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  padding: 0;
+}
+
+/*featured products section */
 .container-1{
 display: flex;
 flex-wrap: wrap;
@@ -1311,13 +1333,10 @@ margin-left: 90px;
 margin-bottom: 160px;
 }
 
+/* DEALS OF THE DAY */
+
 .small{
-/* width: 100%;
-border: 2px solid #E5E7EB;
-border-radius: 10px;
-padding: 15px;
-background: white;
-box-sizing: border-box; */
+
 width: 100%;
 border: 1px solid #E5E7EB; /* Thinner border */
 border-radius: 10px;
