@@ -112,7 +112,7 @@
       white-space: nowrap;
   }
 }
-
+/* HERO SECTION */
   @media (max-width: 768px) {
     .hero-section {
       display: flex;
@@ -152,21 +152,21 @@
   z-index: 2;
 }
 
-/* Remove Price */
 .price-container {
   display: none !important;
 }
 
-/* Heading */
 .hero-content h1 {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
+  margin-right: 30px;
 }
 
-/* Paragraph */
+
 .hero-content p {
   font-size: 0.9rem;
   margin-bottom: 1rem;
+  margin-right: 30px;
 }
 
 /* Button */
@@ -182,6 +182,7 @@
   font-weight: bold;
   text-align: center;
   margin-top: 1rem;
+  margin-right: 35px;
 }
 
 .shop-now:hover {
