@@ -608,42 +608,62 @@
 /* ===========================
  Responsive Design
  =========================== */
-@media (max-width: 1024px) {
-  .footer-container {
-      grid-template-columns: repeat(2, 1fr);
-  }
-}
-
+/* Media query for smaller screens (max-width: 768px) */
 @media (max-width: 768px) {
-  .newsletter {
+  .footer-container {
+      display: flex;
       flex-direction: column;
+      align-items: center;
       text-align: center;
   }
 
-  .newsletter-form {
-      align-items: center;
-      margin-top: 15px;
+  .footer-column {
+      width: 100%;
+      margin-bottom: 20px;
   }
 
-  .newsletter-input input {
+  .newsletter {
       width: 100%;
   }
 
-  .footer-container {
-      grid-template-columns: repeat(1, 1fr);
-  }
-
-  .footer-column {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .app-links img {
-      width: 130px;
+  .newsletter input {
+      width: 90%;
   }
 
   .social-icons {
       justify-content: center;
+  }
+
+  .app-links {
+      justify-content: center;
+  }
+}
+
+/* Media query for extra small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .footer-column h4 {
+      font-size: 14px;
+  }
+
+  .footer-column ul li a {
+      font-size: 12px;
+  }
+
+  .newsletter input {
+      font-size: 14px;
+      padding: 8px;
+  }
+
+  .newsletter button {
+      font-size: 14px;
+      padding: 8px;
+  }
+
+  .social-icons {
+      gap: 10px;
+  }
+
+  .app-links img {
+      max-width: 120px;
   }
 }
