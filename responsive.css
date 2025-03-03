@@ -1,5 +1,4 @@
 /* RESPONSIVE DESIGN */
-/* responsive nav Small Screens */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -15,12 +14,10 @@
   z-index: 1000;
 }
 
-/* When active, slide in */
 .mobile-menu.active {
   right: 0;
 }
 
-/* Close button */
 .close-btn {
   background: none;
   border: none;
@@ -63,7 +60,7 @@
 
 @media screen and (max-width: 767px) {
   .hamburger {
-      display: block; /* Show the hamburger menu */
+      display: block; 
       font-size: 30px;
       cursor: pointer;
       background: none;
@@ -82,7 +79,7 @@
   }
 
   .nav-1 > *:not(.count-down) {
-      display: none;
+      display: none !important;
   }
 
   /* Show nav-3 always */
@@ -119,80 +116,84 @@
 
 /* Hero section */
 @media (max-width: 768px) {
-  /* Stack the hero section vertically */
+  /* Hero Section: Center Everything */
   .hero-section {
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     padding: 2rem 10px;
     background-position: center top;
     background-size: cover;
-    min-height: auto; /* Let content determine height */
-  }
-  
-  /* Adjust hero content for mobile */
-  .hero-content {
-    max-width: 100%;
-    text-align: center;
-    margin: 0 auto 3rem; /* Center content and add bottom margin */
-  }
-  
-  .hero-content h1 {
-    font-size: 2rem; /* Smaller heading */
-  }
-  
-  .hero-content p {
-    font-size: 0.9rem; /* Slightly smaller text */
-  }
-  
-  /* Price container adjustments */
-  .price-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  
-  
-  .shop-now {
-    
-    width: 100%;
-    padding: 0.8rem;
-    margin-bottom: 1rem;
-    text-align: center;
+    min-height: 100vh; /* Full height */
+    position: relative;
   }
 
-  
-  .price, .price-del, .text .under-text {
-    display: none;
-  }
-  
-  /* Adjust hero image container */
+  /* Hero Image */
   .hero-image {
     width: 100%;
-    height: 200px; /* Set a fixed height or use auto if you prefer */
+    height: 300px; /* Adjust as needed */
     background-size: cover;
     background-position: center;
-    margin-bottom: 2rem;
-
-    
-  }
-  
-  /* Header with View All Button adjustments */
-  .header {
-    flex-direction: column;
+    position: relative;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    margin: 0 10px;
+  }
+
+  /* Center Hero Content */
+  .hero-content {
+    width: 90%;
+    max-width: 100%;
     text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
   }
-  
-  .header h2, .header p {
-    margin: 0.5rem 0;
-    
+
+  .hero-content h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
   }
-  
-  .view-all {
-    margin-left: 0;
+
+  .hero-content p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  /* New Shop Now Button */
+  .new-shop-now {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    background-color: #ff6600;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 1rem;
+    z-index: 3;
+  }
+
+  .new-shop-now:hover {
+    background-color: #cc5500;
   }
 }
+
 
 
 /* Responsive Design Footer */
