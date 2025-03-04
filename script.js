@@ -1,25 +1,32 @@
     //CountDown Animation
- function startCountdown() {
-        const countdownElement = document.querySelector('.count-down');
-        let totalSeconds = 47 * 24 * 60 * 60 + 6 * 60 * 60 + 59 * 60 + 59;
+// Countdown Animation
+function startCountdown() {
+    const countdownElement = document.querySelector('.count-down');
+    let totalSeconds = 47 * 24 * 60 * 60 + 6 * 60 * 60 + 59 * 60 + 59;
 
-        function updateCountdown() {
-            let days = Math.floor(totalSeconds / (24 * 60 * 60));
-            let hours = Math.floor((totalSeconds % (24 * 60 * 60)) / (60 * 60));
-            let minutes = Math.floor((totalSeconds % (60 * 60)) / 60);
-            let seconds = totalSeconds % 60;
-
-            countdownElement.innerHTML = `Until the end of the sale: <strong>${days}</strong> days <strong>${hours}</strong> hours <strong>${minutes}</strong> minutes <strong>${seconds}</strong> sec.`;
-            totalSeconds--;
-
-            if (totalSeconds < 0) {
-                countdownElement.innerHTML = "Sale Ended!";
-            }
+    function updateCountdown() {
+        if (totalSeconds < 0) {
+            countdownElement.innerHTML = "Sale Ended!";
+            clearInterval(countdownInterval); // Stop the countdown
+            return;
         }
 
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
+        let days = Math.floor(totalSeconds / (24 * 60 * 60));
+        let hours = Math.floor((totalSeconds % (24 * 60 * 60)) / (60 * 60));
+        let minutes = Math.floor((totalSeconds % (60 * 60)) / 60);
+        let seconds = totalSeconds % 60;
+
+        countdownElement.innerHTML = `Until the end of the sale: <strong>${days}</strong> days <strong>${hours}</strong> hours <strong>${minutes}</strong> minutes <strong>${seconds}</strong> sec.`;
+        totalSeconds--;
     }
+
+    let countdownInterval = setInterval(updateCountdown, 1000);
+    updateCountdown();
+}
+
+// Run countdown when page loads
+window.onload = startCountdown;
+
 
     //Dynamic Search Placeholder Animation
     function animateSearchPlaceholder() {
@@ -455,7 +462,8 @@ document.addEventListener('DOMContentLoaded', function() {
     nextBtn.style.opacity = maxIndex === 0 ? '0.5' : '1';
 });
 
-function startCountdown(durationInSeconds) {
+// Countdown for multiple elements
+function startMultipleCountdowns(durationInSeconds) {
     let timer = durationInSeconds;
 
     function updateCountdown() {
@@ -483,9 +491,9 @@ function startCountdown(durationInSeconds) {
 
 // Start countdown from 84 days, 6 hours, 59 minutes, and 59 seconds
 const initialDuration = (84 * 24 * 60 * 60) + (6 * 60 * 60) + (59 * 60) + 59;
-startCountdown(initialDuration);
+startMultipleCountdowns(initialDuration);
 
-// features section
+// Features section animation
 document.addEventListener("DOMContentLoaded", () => {
     const features = document.querySelectorAll(".feature");
 
@@ -498,9 +506,8 @@ document.addEventListener("DOMContentLoaded", () => {
         feature.addEventListener("mouseout", () => {
             feature.style.transform = "scale(1)";
         });
-        
     });
-});  
+});
 
 
 document.querySelector(".hamburger").addEventListener("click", function() {

@@ -132,7 +132,7 @@
   width: 100%;
   height: 110px;
   background-size: cover;
-  background-position: center; /* Ensures the background image is centered */
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -142,7 +142,7 @@
 /* Hero Content */
 .hero-content {
   width: 90%;
-  max-width: 600px; /* Restrict width for better centering */
+  max-width: 600px; 
   text-align: center;
   padding: 10px;
   color: white;
@@ -628,7 +628,59 @@
   }
 }
 
-/* Responsive Design */
+@media (max-width: 768px) {
+  .newsletter {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 15px; 
+  }
+
+  .newsletter-text h2 {
+      font-size: 1.4rem; 
+  }
+
+  .newsletter-form {
+      width: 100%;
+  }
+
+ 
+  .newsletter-input {
+      flex-direction: column; 
+      border: none;
+      display: flex;
+      align-items: center;
+      width: 100%;
+  }
+
+  .newsletter-input input {
+      width: 90%;
+      max-width: 350px;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+  }
+
+  #subscribe-btn {
+      width: auto;
+      max-width: 180px;
+      padding: 10px;
+      font-size: 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      margin-top: 10px;
+  }
+
+  .newsletter small {
+      font-size: 12px;
+      display: block;
+      margin-top: 10px;
+  }
+}
+
 @media (max-width: 768px) {
   .footer-container {
       display: flex;
@@ -640,13 +692,28 @@
   .footer-column {
       width: 100%;
       margin-bottom: 20px;
+      text-align: center;
   }
 
+.phone, 
+  .email {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px; 
+  }
+
+  .phone img, 
+  .email img {
+      width: 20px; 
+      height: auto;
+  }
+  
   .app-links {
       display: flex;
-      flex-direction: column; /* Stack elements */
+      flex-direction: column; 
       align-items: center;
-      gap: 15px; /* Add spacing between elements */
+      gap: 15px; 
   }
 
   .app-link {
@@ -657,24 +724,50 @@
   }
 
   .app-link img {
-      width: 120px; /* Adjust button size */
+      width: 120px; 
       height: auto;
   }
 
   .app-link p {
       font-size: 14px;
-      margin-top: 5px; /* Space between button and text */
+      margin-top: 5px; 
   }
   .social-icons {
     gap: 10px;
-    margin-left: 100px ;
+    
+}
+.final-container{
+  flex-direction: column; 
+    align-items: flex-start; 
+    gap: 15px; 
 }
 }
 
-/* Media query for extra small screens (max-width: 480px) */
+
 @media (max-width: 480px) {
+  .footer-column {
+    text-align: center; 
+}
+
+.phone, 
+  .email {
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+      gap: 8px; 
+  }
+
+  .phone img, 
+  .email img {
+      width: 20px; 
+      height: auto;
+  }
+
   .footer-column h4 {
       font-size: 14px;
+  }
+  .footer-column .phone .email{
+    margin-left: 100px;
   }
 
   .footer-column ul li a {
@@ -686,26 +779,64 @@
       padding: 8px;
   }
 
-  .newsletter button {
-      font-size: 14px;
-      padding: 8px;
-  }
-
   .social-icons {
       gap: 10px;
-      margin-left: 100px ;
+      margin-left: 80px ;
   }
 
   .app-links {
-      gap: 10px; /* Reduce gap slightly for smaller screens */
+      gap: 10px; 
   }
 
   .app-link img {
-      max-width: 100px; /* Slightly reduce button size */
+      max-width: 100px; 
   }
 
   .app-link p {
       font-size: 12px;
+  }
+  .final-container{
+    flex-direction: column; 
+      align-items: flex-start; 
+      gap: 15px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .final-inner {
+      display: flex;
+      flex-direction: column; 
+      align-items: center;
+      text-align: center;
+  }
+
+  .left, 
+  .right {
+      float: none; 
+      width: 100%; 
+      text-align: center; 
+      margin-bottom: 20px; 
+  }
+
+  .final-links {
+      justify-content: center; 
+  }
+}
+
+
+@media (max-width: 480px) {
+  .final-copyright {
+      font-size: 12px; 
+  }
+
+  .final-payment-icons {
+      flex-wrap: wrap; 
+      gap: 10px;
+  }
+
+  .final-links {
+      flex-direction: column; 
+      gap: 10px;
   }
 }
 
