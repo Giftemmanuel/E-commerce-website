@@ -628,8 +628,7 @@
   }
 }
 
-/* Responsive Design*/
-
+/* Responsive Design */
 @media (max-width: 768px) {
   .footer-container {
       display: flex;
@@ -643,21 +642,33 @@
       margin-bottom: 20px;
   }
 
-  .newsletter {
-      width: 100%;
-  }
-
-  .newsletter input {
-      width: 90%;
-  }
-
-  .social-icons {
-      justify-content: center;
-  }
-
   .app-links {
-      justify-content: center;
+      display: flex;
+      flex-direction: column; /* Stack elements */
+      align-items: center;
+      gap: 15px; /* Add spacing between elements */
   }
+
+  .app-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .app-link img {
+      width: 120px; /* Adjust button size */
+      height: auto;
+  }
+
+  .app-link p {
+      font-size: 14px;
+      margin-top: 5px; /* Space between button and text */
+  }
+  .social-icons {
+    gap: 10px;
+    margin-left: 100px ;
+}
 }
 
 /* Media query for extra small screens (max-width: 480px) */
@@ -682,9 +693,19 @@
 
   .social-icons {
       gap: 10px;
+      margin-left: 100px ;
   }
 
-  .app-links img {
-      max-width: 120px;
+  .app-links {
+      gap: 10px; /* Reduce gap slightly for smaller screens */
+  }
+
+  .app-link img {
+      max-width: 100px; /* Slightly reduce button size */
+  }
+
+  .app-link p {
+      font-size: 12px;
   }
 }
+
